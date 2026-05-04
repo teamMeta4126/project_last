@@ -4,6 +4,10 @@ public class Algorithm3 {
                                     int totalPopulation,
                                     int totalGoods,
                                     int totalLifestyle) {
+        
+        if (cityMap == null || cityMap.length == 0) {
+            throw new SE116ConfigurationException("ERROR: City map is null or empty. Resource distribution cannot proceed.");
+        }
 
         int rows = cityMap.length;
         int cols = cityMap[0].length;
